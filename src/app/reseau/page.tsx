@@ -10,7 +10,19 @@ import {
     TitleMarkup,
     TypographyBold
 } from "@bytel/trilogy-react";
-import {Align, Column, Columns, Image, RadiusValues, Tab, TabList, TabPanel, TabPanels, Tabs} from "@trilogy-ds/react";
+import {
+    Align,
+    Column,
+    Columns,
+    Image,
+    RadiusValues,
+    Tab,
+    TabList,
+    TabPanel,
+    TabPanels,
+    Tabs,
+    TrilogyColor
+} from "@trilogy-ds/react";
 import Internet from "@/app/reseau/internet";
 import Mobile from "@/app/reseau/mobile";
 
@@ -20,9 +32,9 @@ export default function Page() {
             <Section>
                 <Text>Header</Text>
             </Section>
-            <Hero backgroundColor={'MAIN'}>
+            <Hero backgroundColor={TrilogyColor.MAIN}>
                 <Container>
-                    <Columns verticalAlign={"ALIGNED_CENTER"}>
+                    <Columns verticalAlign={Align.CENTER}>
                         <Column>
                             <Title level={1} inverted markup={TitleMarkup.H1}> {/* Force le H1 (recommandé) */}
                                 Les réseaux m
@@ -49,7 +61,7 @@ export default function Page() {
                         <Column>
                             <Image radius={RadiusValues.MEDIUM}
                                    src="/_CMS_LANDING_PAGES_hub_ensemble-30-ans@2x.webp"
-                                   align={"ALIGNED_CENTER"}/>
+                                   align={Align.CENTER}/>
                         </Column>
                     </Columns>
                 </Container>

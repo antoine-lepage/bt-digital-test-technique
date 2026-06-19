@@ -15,7 +15,7 @@ import {
     CardImage,
     Column,
     Columns,
-    Container,
+    Container, DirectionEnum,
     FlexBox,
     GapSize,
     Icon,
@@ -46,10 +46,10 @@ export default function Internet() {
             <Section backgroundColor={TrilogyColor.MAIN_FADE}>
                 <Container>
                     <Box>
-                        <BoxContent backgroundColor="MAIN">
+                        <BoxContent backgroundColor={TrilogyColor.MAIN}>
                             <FlexBox align={{ mobile: Align.START, tablet: Align.CENTER }} justify={ Justify.CENTER }>
                                 <Icon size={IconSize.LARGE} name={IconName.INFOS_CIRCLE} color={IconColor.WHITE}></Icon>
-                                <FlexBox align={Align.START} direction={{ mobile: "row", tablet: "column"}}>
+                                <FlexBox align={Align.START} direction={{ mobile: DirectionEnum.ROW, tablet: DirectionEnum.COLUMN}}>
                                     <Text marginless markup={TextMarkup.SPAN} typo={TypographyBold.TEXT_WEIGHT_BOLD} inverted>
                                         Concernés par l'arrêt de l'ADSL ?
                                     </Text>
@@ -58,7 +58,7 @@ export default function Internet() {
                                         au réseau ADSL.
                                     </Text>
                                 </FlexBox>
-                                <Button variant="CONVERSION"> En savoir plus </Button>
+                                <Button variant={ButtonVariant.CONVERSION}> En savoir plus </Button>
                             </FlexBox>
                         </BoxContent>
                     </Box>
@@ -255,7 +255,7 @@ export default function Internet() {
                                             </Text>
                                         </Row>
                                         <Row narrow>
-                                            <Button variant="PRIMARY">
+                                            <Button variant={ButtonVariant.PRIMARY}>
                                                 En profiter
                                             </Button>
                                         </Row>
@@ -283,7 +283,7 @@ export default function Internet() {
                                             </Text>
                                         </Row>
                                         <Row narrow>
-                                            <Button variant="PRIMARY">
+                                            <Button variant={ButtonVariant.PRIMARY}>
                                                 En profiter
                                             </Button>
                                         </Row>
