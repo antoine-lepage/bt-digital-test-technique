@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@bytel/trilogy-react": "^4.17.0",
     "@trilogy-ds/react": "^4.17.0",
     "next": "16.2.9",
     "react": "19.2.7",

@@ -23,10 +23,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  console.log(children)
   return (
     <html lang="en">
     <head>
-      <link rel="stylesheet" href="https://assets.bouyguestelecom.fr/TRILOGY/trilogy-styles@0.0.25-build/default/trilogy.css"/>
+      <link rel="stylesheet" href="https://assets.bouyguestelecom.fr/TRILOGY/trilogy-styles@4.9.2/default/trilogy.css"/>
     </head>
     <body className={`${geistSans.variable} ${geistMono.variable}`}>
     {children}

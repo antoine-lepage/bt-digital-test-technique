@@ -1,5 +1,5 @@
-export default function Internet() {
+export default function Mobile() {
     return (
-        <div>Internet</div>
+        <div>Construction en cours ...</div>
     )
 }

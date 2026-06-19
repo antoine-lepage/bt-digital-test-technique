@@ -8,10 +8,11 @@ import {
     TextMarkup,
     Title,
     TitleMarkup,
-    TypographyBold,
-    TypographyTransform
+    TypographyBold
 } from "@bytel/trilogy-react";
-import {Column, Columns, Image, Tab, TabList, TabPanel, TabPanels, Tabs} from "@trilogy-ds/react";
+import {Align, Column, Columns, Image, RadiusValues, Tab, TabList, TabPanel, TabPanels, Tabs} from "@trilogy-ds/react";
+import Internet from "@/app/reseau/internet";
+import Mobile from "@/app/reseau/mobile";
 
 export default function Page() {
     return (
@@ -46,25 +47,30 @@ export default function Page() {
                             </Text>
                         </Column>
                         <Column>
-                            <Image src="/_CMS_LANDING_PAGES_hub_ensemble-30-ans@2x.webp" alt={"Column image"} align={"ALIGNED_CENTER"} height={"50%"} width={"100%"}/>
+                            <Image radius={RadiusValues.MEDIUM}
+                                   src="/_CMS_LANDING_PAGES_hub_ensemble-30-ans@2x.webp"
+                                   align={"ALIGNED_CENTER"}/>
                         </Column>
                     </Columns>
                 </Container>
             </Hero>
             <Tabs>
-                <TabList>
+                <TabList align={Align.CENTER}>
                     <Tab label="Internet" />
                     <Tab label="Mobile" />
                 </TabList>
                 <TabPanels>
                     <TabPanel>
-                        <Title> Hello ! </Title>
+                        <Internet></Internet>
                     </TabPanel>
                     <TabPanel>
-                        <Title> Nothing yet... </Title>
+                        <Mobile></Mobile>
                     </TabPanel>
                 </TabPanels>
             </Tabs>
+            <Section>
+                <Text>Footer</Text>
+            </Section>
         </>
     )
 }
